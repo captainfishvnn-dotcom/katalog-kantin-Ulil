@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantin Sehat & Program Makan Bergizi Gratis KOPDES</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Mengambil ikon dari FontAwesome untuk mempercantik tampilan -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Banner Utama -->
+    <header>
+        <div class="header-content">
+            <span class="badge"><i class="fa-solid fa-seedling"></i> Sehat, Bergizi & Higienis</span>
+            <h1>Makan Bergizi Gratis & KOPDES</h1>
+            <p>Dukung pertumbuhan optimal dengan menu harian kaya nutrisi dan produk koperasi berkualitas.</p>
+        </div>
+        
+        <!-- Filter Kategori Menu -->
+        <nav class="filter-nav">
+            <button class="filter-btn active" onclick="filterMenu('all', this)"><i class="fa-solid fa-border-all"></i> Semua Menu</button>
+            <button class="filter-btn" onclick="filterMenu('makanan', this)"><i class="fa-solid fa-bowl-food"></i> Makanan Utama</button>
+            <button class="filter-btn" onclick="filterMenu('sehat', this)"><i class="fa-solid fa-apple-whole"></i> Paket Sehat / Gratis</button>
+            <button class="filter-btn" onclick="filterMenu('minuman', this)"><i class="fa-solid fa-cup-water"></i> Susu & Minuman</button>
+            <button class="filter-btn" onclick="filterMenu('koperasi', this)"><i class="fa-solid fa-store"></i> KOPDES Mart</button>
+        </nav>
+    </header>
+
+    <!-- Kontainer Daftar Menu -->
+    <main class="container">
+
+        <!-- 1. Makanan 1 -->
+        <div class="card" data-category="makanan">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" alt="Nasi Ayam Teriyaki">
+                <span class="tag-category">Makanan</span>
+            </div>
+            <div class="card-body">
+                <h3>Nasi Ayam Teriyaki Sehat</h3>
+                <p class="desc">Daging ayam pilihan dengan saus teriyaki rendah sodium, disajikan dengan brokoli & wortel segar.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-fire"></i> 450 Kkal</span>
+                    <span><i class="fa-solid fa-dumbbell"></i> Protein Tinggi</span>
+                </div>
+                <p class="price">Rp 15.000 <small class="free-label">(Bisa Subsidi Gratis)</small></p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20mau%20pesan%20Nasi%20Ayam%20Teriyaki%20Sehat" class="btn-order" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan via WA
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. Makanan 2 -->
+        <div class="card" data-category="makanan">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Salad Bowl">
+                <span class="tag-category">Makanan</span>
+            </div>
+            <div class="card-body">
+                <h3>Salad Buah & Ayam Grill</h3>
+                <p class="desc">Campuran selada segar, dada ayam panggang, tomat ceri, dan dressing yoghurt murni.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-fire"></i> 320 Kkal</span>
+                    <span><i class="fa-solid fa-leaf"></i> Serat Tinggi</span>
+                </div>
+                <p class="price">Rp 12.000</p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20mau%20pesan%20Salad%20Buah%20%26%20Ayam%20Grill" class="btn-order" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan via WA
+                </a>
+            </div>
+        </div>
+
+        <!-- 3. Paket Sehat / Gratis -->
+        <div class="card" data-category="sehat">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" alt="Paket Makan Bergizi Gratis">
+                <span class="tag-category free">Program Gratis</span>
+            </div>
+            <div class="card-body">
+                <h3>Paket 4 Sehat 5 Sempurna</h3>
+                <p class="desc">Nasi merah, semur telur puyuh, tahu, sayur bayam bening, buah pisang, dan 1 kotak susu.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-fire"></i> 550 Kkal</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Vitamin Lengkap</span>
+                </div>
+                <p class="price free-text">GRATIS <small>(Klaim Kupon Sekolah)</small></p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20ingin%20klaim%20Paket%20Makan%20Bergizi%20Gratis" class="btn-order btn-free" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Klaim Kupon
+                </a>
+            </div>
+        </div>
+
+        <!-- 4. Paket Sehat 2 -->
+        <div class="card" data-category="sehat">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=500&q=80" alt="Paket Ikan Omega">
+                <span class="tag-category free">Program Gratis</span>
+            </div>
+            <div class="card-body">
+                <h3>Paket Nasi Ikan & Sup Jagung</h3>
+                <p class="desc">Nasi putih, filet ikan kembung goreng kaya Omega-3, sup jagung hangat, dan jeruk manis.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-fire"></i> 480 Kkal</span>
+                    <span><i class="fa-solid fa-fish"></i> Omega-3 Tinggi</span>
+                </div>
+                <p class="price free-text">GRATIS <small>(Klaim Kupon Sekolah)</small></p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20ingin%20klaim%20Paket%20Nasi%20Ikan" class="btn-order btn-free" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Klaim Kupon
+                </a>
+            </div>
+        </div>
+
+        <!-- 5. Minuman / Susu -->
+        <div class="card" data-category="minuman">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=500&q=80" alt="Susu Segar Murni">
+                <span class="tag-category drink">Minuman</span>
+            </div>
+            <div class="card-body">
+                <h3>Susu Sapi Segar Murni (250ml)</h3>
+                <p class="desc">Susu segar pasteurisasi tinggi kalsium untuk kekuatan tulang dan gigi, tersedia rasa Original & Cokelat.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-bone"></i> Kalsium+</span>
+                    <span><i class="fa-solid fa-glass-water"></i> Fresh</span>
+                </div>
+                <p class="price">Rp 5.000</p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20mau%20pesan%20Susu%20Sapi%20Segar" class="btn-order" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan via WA
+                </a>
+            </div>
+        </div>
+
+        <!-- 6. Minuman / Jus -->
+        <div class="card" data-category="minuman">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=500&q=80" alt="Jus Alpukat">
+                <span class="tag-category drink">Minuman</span>
+            </div>
+            <div class="card-body">
+                <h3>Jus Alpukat Vitamin E</h3>
+                <p class="desc">Alpukat segar pilihan dengan tambahan susu cokelat kental manis rendah gula dan es serut.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-heart-pulse"></i> Lemak Baik</span>
+                    <span><i class="fa-solid fa-blender"></i> Fresh Made</span>
+                </div>
+                <p class="price">Rp 8.000</p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20mau%20pesan%20Jus%20Alpukat" class="btn-order" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan via WA
+                </a>
+            </div>
+        </div>
+
+        <!-- 7. Koperasi Desa (KOPDES) -->
+        <div class="card" data-category="koperasi">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1599599810694-b5b37242cdd4?auto=format&fit=crop&w=500&q=80" alt="Sembako KOPDES">
+                <span class="tag-category kopdes">KOPDES</span>
+            </div>
+            <div class="card-body">
+                <h3>Paket Sembako Keluarga KOPDES</h3>
+                <p class="desc">Beras lokal 5kg, Minyak Goreng 1L, dan Gula Pasir 1kg kualitas premium harga gotong royong.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-handshake"></i> Produk Lokal</span>
+                    <span><i class="fa-solid fa-tag"></i> Harga Murah</span>
+                </div>
+                <p class="price">Rp 75.000</p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20mau%20pesan%20Paket%20Sembako%20KOPDES" class="btn-order" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan via WA
+                </a>
+            </div>
+        </div>
+
+        <!-- 8. Koperasi Desa 2 -->
+        <div class="card" data-category="koperasi">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=500&q=80" alt="Alat Tulis KOPDES">
+                <span class="tag-category kopdes">KOPDES</span>
+            </div>
+            <div class="card-body">
+                <h3>Paket Alat Tulis Sekolah Lengkap</h3>
+                <p class="desc">Buku tulis berkualitas (5 pcs), pulpen, pensil, penghapus, penggaris, dan kotak pensil praktis.</p>
+                <div class="nutrition-info">
+                    <span><i class="fa-solid fa-book"></i> Kebutuhan Siswa</span>
+                    <span><i class="fa-solid fa-check"></i> SNI</span>
+                </div>
+                <p class="price">Rp 25.000</p>
+                <a href="https://wa.me/085770838109?text=Halo,%20saya%20mau%20pesan%20Paket%20Alat%20Tulis%20KOPDES" class="btn-order" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan via WA
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kantin Sehat & KOPDES PPLG. Didukung penuh untuk Generasi Sehat & Cerdas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
